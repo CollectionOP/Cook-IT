@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
 header {
   position: relative;
   top: 30px;
@@ -24,9 +28,19 @@ header {
   border-bottom: 1px solid #020122;
 }
 
+.nav-links a:hover{
+  border-bottom: 2px solid red;
+}
+
+
+#active{
+  border-bottom: 2px solid red;
+}
+
 #login-btn {
   margin: 10px;
   background-color: rgb(133, 133, 69);
+  color: white;
   height: 35px;
   width: 100px;
   border-radius: 10px;
