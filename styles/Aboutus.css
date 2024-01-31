@@ -1,0 +1,99 @@
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+  background-image: url("/src/images/pexels-roman-odintsov-4551832.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  height: 350px;
+  width: auto;
+}
+
+.para {
+  font-weight: 600;
+  font-size: large;
+  color: black;
+}
+
+.heading {
+  text-shadow: -7px -2px 2px rgba(156, 156, 156, 0.6);
+  font-size: xx-large;
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(224, 195, 98);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
