@@ -1,0 +1,183 @@
+body{
+  background-color: #eeeeee;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  top: 30px;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+  width: 100px;
+  height: 20px;
+  margin: 10px;
+  
+}
+
+.nav-links {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #020122;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #020122;
+}
+
+.nav-links a:hover{
+  border-bottom: 2px solid red;
+}
+
+
+#active{
+  border-bottom: 2px solid red;
+}
+
+#login-btn {
+  margin: 10px;
+  background-color: rgb(133, 133, 69);
+  color: white;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+#reg-btn {
+  margin: 10px;
+  background-color: white;
+  border: 2px solid orange;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  color: orange;
+}
+
+.hero-image {
+  bottom: 57px;
+  background-image: url("/src/images/backgroundImg.jpg");
+  height: 350px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.7;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff5f5;
+  text-shadow: -7px -2px 2px rgba(156,156,156,0.6);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 400px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+  background-image: url("/src/images/pexels-roman-odintsov-4551832.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  height: 350px;
+  width: auto;
+}
+
+.para {
+  font-weight: 600;
+  font-size: large;
+  color: black;
+}
+
+.heading {
+  text-shadow: -7px -2px 2px rgba(156, 156, 156, 0.6);
+  font-size: xx-large;
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(224, 195, 98);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
