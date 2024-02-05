@@ -12,8 +12,31 @@ const detailsCall = () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            const container = document.querySelector('.recipe-container-details');
+            const recipeName = data.recipe.label
+            const image = data.recipe.image
+            const ingredients = data.recipe.ingredients
+            const calories = data.recipe.calories
 
+            const template = `
+            <h1>${recipeName}</h1>
+                <img src="${image}" alt="">
+                <h3> Calories: ${Math.floor(calories)}</h3>
+                <h2> Ingredients: </h2>
 
+            `
+
+            container.innerHTML += template;
+
+            ingredients.map(ingredient => {
+                const newTemplate = `
+                <ul>
+                <li>${ingredient.text}</li>
+                </ul>
+                `
+                container.innerHTML += newTemplate
+
+            })
         })
 }
 

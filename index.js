@@ -1,15 +1,14 @@
 const API_KEY_RECIPE = '0420d2b6541d7d36cad725f9dc614e5b'
 const API_ID_RECIPE = '8f4eed8f'
-const URL = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${API_ID_RECIPE}&app_key=${API_KEY_RECIPE}&q=chicken`
 
-const recipeCall = () => {
-  fetch(URL)
+const recipeCall = (inputValue) => {
+  fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${API_ID_RECIPE}&app_key=${API_KEY_RECIPE}&q=${inputValue ? inputValue : 'chicken'}`)
     .then(response => response.json())
     .then(data => {
       const recipesContainer = document.querySelector('.recipes-container')
+      recipesContainer.innerHTML = ''
 
       data.hits.map(recipe => {
-        console.log(recipe);
 
         const uri = recipe.recipe.uri
         const id = uri.slice(51)
@@ -32,3 +31,15 @@ const recipeCall = () => {
 }
 recipeCall();
 
+const filterButtons = document.querySelector('.filter-buttons');
+const buttons = filterButtons.querySelectorAll('a');
+
+buttons.forEach(button => {
+  button.addEventListener('click', (event) => {
+
+    event.preventDefault();
+    inputValue = button.textContent;
+    console.log(inputValue);
+    recipeCall(inputValue);
+  })
+})
