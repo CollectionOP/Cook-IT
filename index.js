@@ -9,7 +9,6 @@ const recipeCall = (inputValue) => {
       recipesContainer.innerHTML = ''
 
       data.hits.map(recipe => {
-        // console.log(recipe);
 
         const uri = recipe.recipe.uri
         const id = uri.slice(51)

@@ -12,7 +12,6 @@ const detailsCall = () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-
             const container = document.querySelector('.recipe-container-details');
             const recipeName = data.recipe.label
             const image = data.recipe.image
