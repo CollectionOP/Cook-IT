@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #eeeeee;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -22,7 +22,6 @@ header img {
   width: 100px;
   height: 20px;
   margin: 10px;
-  
 }
 
 .nav-links {
@@ -38,12 +37,11 @@ header img {
   border-bottom: 1px solid #020122;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   border-bottom: 2px solid red;
 }
 
-
-#active{
+#active {
   border-bottom: 2px solid red;
 }
 
@@ -85,7 +83,7 @@ header img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff5f5;
-  text-shadow: -7px -2px 2px rgba(156,156,156,0.6);
+  text-shadow: -7px -2px 2px rgba(156, 156, 156, 0.6);
 }
 
 *,
@@ -102,6 +100,7 @@ header img {
 }
 
 .card {
+  height: 700px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -163,7 +162,7 @@ img {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
+  padding: 6px;
   color: white;
   background-color: #000;
   text-align: center;
@@ -173,6 +172,9 @@ img {
 
 .button:hover {
   background-color: #555;
+}
+
+@media only screen and (max-width: 460px) {
 }
 
 @media screen and (max-width: 650px) {
